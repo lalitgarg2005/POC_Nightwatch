@@ -1,0 +1,38 @@
+{
+  "src_folders" : ["tests"],
+  "page_objects_path": ["tests/pages"],
+
+  "output_folder" : "logs",
+ 
+  "selenium_server" : {
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "/Users/lalitg/LALIT/DEMO_Projects/AUTOMATION/nightwatch/node_modules/.bin/selenium-server-standalone-3.9.1.jar",
+    "log_path" : "logs",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "/Users/lalitg/LALIT/DEMO_Projects/AUTOMATION/nightwatch/lib/chromedriver",
+      "webdriver.firefox.driver" : "/Users/lalitg/LALIT/DEMO_Projects/AUTOMATION/nightwatch/geckodriver"
+    }
+  }
+},
+  
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port" : 4444,
+      "selenium_host" : "127.0.0.1",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}

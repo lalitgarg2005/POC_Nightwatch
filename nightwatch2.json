@@ -1,0 +1,53 @@
+{
+    "src_folders" : ["./tests"],
+
+
+  "webdriver" : {
+    "start_process": true
+  },
+  
+  "selenium_server" : {
+    "selenium" : {
+      "start_process": true,
+      "server_path": "node_modules/.bin/selenium-server-standalone-3.9.1.jar",
+      "host": "127.0.0.1",
+      "port": 4444,
+      "cli_args": {
+        "webdriver.chrome.driver": "node_modules/.bin/chromedriver"
+      }
+    },
+
+    "desiredCapabilities" : {
+      "browserName" : "chrome",
+      "acceptSslCerts": true
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "webdriver": {
+        "launch_url": "https://amazon.com",        
+        "selenium_port": 4444,
+        "selenium_host": "localhost",
+        "server_path": "node_modules/.bin/chromedriver",
+        "port": 9515,
+        "timeout": 15000, 
+        "retry_attempts": 5,
+        "cli_args": [
+          "--log", "debug"
+        ]
+      },
+      "filter": ["./tests"],
+      "desiredCapabilities" : {
+        "browserName" : "chrome",
+        "acceptInsecureCerts" : true
+      }
+    },
+
+    "chrome" : {
+      "desiredCapabilities" : {
+        "browserName" : "chrome"      
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "src_folders": [
+    "tests"
+  ],
+  "output_folder": "reports",
+  "custom_commands_path": "",
+  "custom_assertions_path": "",
+  "page_objects_path": "",
+  "globals_path": "",
+  "disable_colors": false,
+  "test_workers": false,
+  "selenium": {
+    "start_process": true,
+    "host": "localhost",
+    "port": 4444,
+    "server_path": "node_modules/.bin/selenium-server-standalone-3.9.1.jar",
+    "log_path": "./logs",
+    "cli_args": {
+      "webdriver.chrome.driver": "node_modules/.bin/chromedriver"
+    }
+  },
+  "desiredCapabilities": {
+    "browserName": "chrome",
+    "acceptSslCerts": true
+  },
+  "test_settings": {
+    "default": {
+      "webdriver": {
+        "server_path": "./node_modules/.bin/chromedriver",
+        "cli_args": [
+          "--log",
+          "debug"
+        ]
+      },
+      "disable_colors": false,
+      "screenshots": {
+        "enabled": false,
+        "path": ""
+      },
+      "request_timeout_options": {
+        "timeout": 60000,
+        "retry_attempts": 5
+      },
+      "default_path_prefix" : "",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "acceptInsecureCerts": true
+      }
+    },
+    "chrome": {
+      "webdriver": {
+        "port": 9515,
+        "default_path_prefix": "",
+        "server_path": "./node_modules/.bin/chromedriver",
+        "cli_args": [
+          "--verbose"
+        ]
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "loggingPrefs": {
+          "driver": "INFO",
+          "server": "OFF",
+          "browser": "INFO"
+        }
+      }
+    }
+  }
+}
